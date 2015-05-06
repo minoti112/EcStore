@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import ECSlidingViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var slidingViewController: ECSlidingViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        slidingViewController = window!.rootViewController as? ECSlidingViewController
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        slidingViewController!.topViewController = mainStoryboard.instantiateViewControllerWithIdentifier("itemListNav") as! UIViewController
+        
         return true
     }
 
