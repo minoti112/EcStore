@@ -17,10 +17,14 @@
 		1F05EB3E1AF933EE00B65414 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3C1AF933EE00B65414 /* CartViewController.swift */; };
 		1F05EB401AF93AD600B65414 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */; };
 		1F05EB411AF93AD600B65414 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */; };
+		1FA7BB5F1AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */; };
+		1FA7BB601AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */; };
 		1FAC8EE21AF90612002777E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC8EE01AF90612002777E0 /* Main.storyboard */; };
 		1FAC8EE41AF90612002777E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC8EE31AF90612002777E0 /* Images.xcassets */; };
 		1FAC8EE71AF90612002777E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC8EE51AF90612002777E0 /* LaunchScreen.xib */; };
 		1FAC8EF31AF90612002777E0 /* EcStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC8EF21AF90612002777E0 /* EcStoreTests.swift */; };
+		1FF3D4631AFF447100AA86AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF3D4621AFF447100AA86AE /* Router.swift */; };
+		1FF3D4641AFF447100AA86AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF3D4621AFF447100AA86AE /* Router.swift */; };
 		524BA32B80E948199A962364 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EB428ED9EB6BB28C77AE35 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,7 @@
 		1F05EB381AF932D100B65414 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F05EB3C1AF933EE00B65414 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListItemView.swift; sourceTree = "<group>"; };
 		1FAC8ED71AF90612002777E0 /* EcStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAC8EDB1AF90612002777E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAC8EE11AF90612002777E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		1FAC8EF11AF90612002777E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FAC8EF21AF90612002777E0 /* EcStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcStoreTests.swift; sourceTree = "<group>"; };
 		1FAC8EFD1AF9083F002777E0 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		1FF3D4621AFF447100AA86AE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		20EB428ED9EB6BB28C77AE35 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86805A0DC8F30E88CA32BAA6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D253A16DA207B33D5E5156FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		1F05EB341AF9320500B65414 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 		1F05EB3B1AF9335700B65414 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1FF3D4621AFF447100AA86AE /* Router.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -339,7 +347,9 @@
 				1F05EB401AF93AD600B65414 /* ItemDetailViewController.swift in Sources */,
 				1F05EB3D1AF933EE00B65414 /* CartViewController.swift in Sources */,
 				1F05EB391AF932D100B65414 /* AppDelegate.swift in Sources */,
+				1FF3D4631AFF447100AA86AE /* Router.swift in Sources */,
 				1F05EB2B1AF90E9800B65414 /* ItemListViewController.swift in Sources */,
+				1FA7BB5F1AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */,
 				1F05EB2E1AF90EC900B65414 /* SideMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,10 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF3D4641AFF447100AA86AE /* Router.swift in Sources */,
 				1F05EB3A1AF932D100B65414 /* AppDelegate.swift in Sources */,
 				1FAC8EF31AF90612002777E0 /* EcStoreTests.swift in Sources */,
 				1F05EB411AF93AD600B65414 /* ItemDetailViewController.swift in Sources */,
 				1F05EB3E1AF933EE00B65414 /* CartViewController.swift in Sources */,
+				1FA7BB601AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */,
 				1F05EB2F1AF90EC900B65414 /* SideMenuViewController.swift in Sources */,
 				1F05EB2C1AF90E9800B65414 /* ItemListViewController.swift in Sources */,
 			);

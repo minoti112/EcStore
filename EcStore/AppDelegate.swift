@@ -8,10 +8,13 @@
 
 import UIKit
 import ECSlidingViewController
-import RMPScrollingMenuBarController
+//import RMPScrollingMenuBarController
+//
+//@UIApplicationMain
+//class AppDelegate: UIResponder, UIApplicationDelegate, RMPScrollingMenuBarControllerDelegate {
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, RMPScrollingMenuBarControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var slidingViewController: ECSlidingViewController!
@@ -20,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RMPScrollingMenuBarContro
         // Override point for customization after application launch.
         
         setupSideMenu()
-        setupItemList()
         return true
     }
 
@@ -51,38 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RMPScrollingMenuBarContro
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         slidingViewController!.topViewController = mainStoryboard.instantiateViewControllerWithIdentifier("itemListNav") as! UIViewController
     }
-    
-    private func setupItemList() {
-        var menuController = RMPScrollingMenuBarController()
-        menuController.delegate = self
-        
-        // Customize appearance of menu bar.
-        menuController.view.backgroundColor = UIColor.whiteColor()
-        menuController.menuBar.indicatorColor = UIColor.blueColor()
-        menuController.menuBar.style = RMPScrollingMenuBarStyle.InfinitePaging;
-//        menuController.menuBar.showsIndicator = false;
-//        menuController.menuBar.showsSeparatorLine = false;
-        
-        // Set ViewControllers for menu bar controller
-        var viewControllers = NSMutableArray()
-        for i in 0..<10 {
-            var vc = ItemListViewController()
-            vc.view.backgroundColor = UIColor.whiteColor()
-//            vc.view.backgroundColor = [UIColor colorWithWhite:0.3+0.05*i alpha:1.0];
-//            vc.message = "Message for No.\(i)"
-            viewControllers.addObject(vc)
-        }
-        
-        menuController.setViewControllers(viewControllers as [AnyObject], animated: true)
-        var naviController = UINavigationController(rootViewController: menuController)
-        window!.rootViewController = naviController
-        window?.makeKeyAndVisible()
-    }
 
-    func menuBarController(menuBarController: RMPScrollingMenuBarController, menuBarItemAtIndex:NSInteger) -> RMPScrollingMenuBarItem {
-        var item = RMPScrollingMenuBarItem()
-        item.title = "Title \(menuBarItemAtIndex + 1)"
-        return item
-    }
+//    func menuBarController(menuBarController: RMPScrollingMenuBarController, menuBarItemAtIndex:NSInteger) -> RMPScrollingMenuBarItem {
+//        var item = RMPScrollingMenuBarItem()
+//        item.title = "Title \(menuBarItemAtIndex + 1)"
+//        return item
+//    }
 }
 

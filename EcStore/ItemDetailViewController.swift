@@ -22,6 +22,10 @@ class ItemDetailViewController: UIViewController {
     }
     
 
+    func createView() {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
