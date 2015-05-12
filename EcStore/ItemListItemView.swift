@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemListItemView: UIView {
+class ItemListItemView: UICollectionViewCell {
 
     /*
     // Only override drawRect: if you perform custom drawing.

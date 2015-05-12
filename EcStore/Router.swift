@@ -13,14 +13,14 @@ enum Router: URLRequestConvertible {
     static let baseURLString = "https://api.thebase.in/1"
     static let clientId = "eb6d3098e22806d424cf9f7afe610794"
     static let clientSecret = "8000e50038e59bb32c9dfb55f5dbd88b"
-    static let code = "e6c69d59a01c45b0bd30c4c11c916d56"
+    static let code = "ab21e6ee295d9984c779902add8f72fc"
     static let redirectUri = "http://taka.base.ec/"
     static var OAuthToken: String?
     static var refreshToken: String?
     
     case OAuth
     case ReOAuth
-    case Items(limit: Int, offset: Int)
+    case Items
 
     
     var method: Alamofire.Method {
@@ -40,7 +40,7 @@ enum Router: URLRequestConvertible {
             return "/oauth/token"
         case .ReOAuth:
             return "/oauth/token"
-        case .Items(let limit, let offset):
+        case .Items:
             return "/items"
         }
     }
@@ -56,8 +56,9 @@ enum Router: URLRequestConvertible {
                 "redirect_uri": Router.redirectUri
             ]
         case .ReOAuth:
+            var userDefault = NSUserDefaults.standardUserDefaults()
             var refreshToken: String
-            if let token = Router.refreshToken {
+            if let token = userDefault.objectForKey("refresh_token") as? String {
                 refreshToken = token
             } else {
                 refreshToken = ""
@@ -81,16 +82,19 @@ enum Router: URLRequestConvertible {
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
         
+        println("0:\(parameters)")
+        
         switch self {
         case .OAuth:
-            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
+            return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
         case .ReOAuth:
-            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
+            return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
         default:
-            if let token = Router.OAuthToken {
+            var userDefault = NSUserDefaults.standardUserDefaults()
+            if let token = userDefault.objectForKey("access_token") as? String {
                 mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             }
-            return mutableURLRequest
         }
+        return mutableURLRequest
     }
 }
