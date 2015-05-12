@@ -8,10 +8,8 @@
 
 import UIKit
 import ECSlidingViewController
-//import RMPScrollingMenuBarController
-//
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate, RMPScrollingMenuBarControllerDelegate {
+import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         setupSideMenu()
+        setAccessToken()
         
         return true
     }
@@ -55,6 +54,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         slidingViewController!.topViewController = mainStoryboard.instantiateViewControllerWithIdentifier("itemListNav") as! UIViewController
     }
 
+    private func setAccessToken() {
+//        Alamofire.request(Router.OAuth)
+//            .validate(statusCode: 200..<400)
+//            .responseJSON {(request, response, responseData, error) in
+//                if let data: AnyObject = responseData {
+//                    let json = SwiftyJSON.JSON(data)
+//                    var userDefault = NSUserDefaults.standardUserDefaults()
+//                    userDefault.setObject(json["refresh_token"].string, forKey: "refresh_token")
+//                    userDefault.synchronize()
+//        println(json["refresh_token"].string)
+                    Alamofire.request(Router.ReOAuth)
+                        .validate(statusCode: 200..<400)
+                        .responseJSON {(request, response, responseData, error) in
+                            if let data: AnyObject = responseData {
+                                let json = SwiftyJSON.JSON(responseData!)
+                                var userDefault = NSUserDefaults.standardUserDefaults()
+                                userDefault.setObject(json["access_token"].string, forKey: "access_token")
+                                userDefault.synchronize()
+                                println(json["access_token"].string)
+                            }
+                            if let resError = error {
+                                println("Connection failed2.\(resError.localizedDescription)")
+                                return
+                            }
+                }
+//                if let resError = error {
+//                    println("Connection failed1.\(resError.localizedDescription)")
+//                    return
+//                }
+//        }
+    }
 //    func menuBarController(menuBarController: RMPScrollingMenuBarController, menuBarItemAtIndex:NSInteger) -> RMPScrollingMenuBarItem {
 //        var item = RMPScrollingMenuBarItem()
 //        item.title = "Title \(menuBarItemAtIndex + 1)"

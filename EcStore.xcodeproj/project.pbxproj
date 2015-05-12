@@ -17,6 +17,8 @@
 		1F05EB3E1AF933EE00B65414 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3C1AF933EE00B65414 /* CartViewController.swift */; };
 		1F05EB401AF93AD600B65414 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */; };
 		1F05EB411AF93AD600B65414 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */; };
+		1F30AA001B0222BB00F692B6 /* CollectionIitemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30A9FF1B0222BB00F692B6 /* CollectionIitemListViewController.swift */; };
+		1F30AA011B0222BB00F692B6 /* CollectionIitemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30A9FF1B0222BB00F692B6 /* CollectionIitemListViewController.swift */; };
 		1FA7BB5F1AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */; };
 		1FA7BB601AFE0F6D006A3D2D /* ItemListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */; };
 		1FAC8EE21AF90612002777E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC8EE01AF90612002777E0 /* Main.storyboard */; };
@@ -44,6 +46,7 @@
 		1F05EB381AF932D100B65414 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F05EB3C1AF933EE00B65414 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		1F30A9FF1B0222BB00F692B6 /* CollectionIitemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionIitemListViewController.swift; sourceTree = "<group>"; };
 		1FA7BB5E1AFE0F6D006A3D2D /* ItemListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListItemView.swift; sourceTree = "<group>"; };
 		1FAC8ED71AF90612002777E0 /* EcStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAC8EDB1AF90612002777E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 				1F05EB2D1AF90EC900B65414 /* SideMenuViewController.swift */,
 				1F05EB3C1AF933EE00B65414 /* CartViewController.swift */,
 				1F05EB3F1AF93AD600B65414 /* ItemDetailViewController.swift */,
+				1F30A9FF1B0222BB00F692B6 /* CollectionIitemListViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -344,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F30AA001B0222BB00F692B6 /* CollectionIitemListViewController.swift in Sources */,
 				1F05EB401AF93AD600B65414 /* ItemDetailViewController.swift in Sources */,
 				1F05EB3D1AF933EE00B65414 /* CartViewController.swift in Sources */,
 				1F05EB391AF932D100B65414 /* AppDelegate.swift in Sources */,
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF3D4641AFF447100AA86AE /* Router.swift in Sources */,
+				1F30AA011B0222BB00F692B6 /* CollectionIitemListViewController.swift in Sources */,
 				1F05EB3A1AF932D100B65414 /* AppDelegate.swift in Sources */,
 				1FAC8EF31AF90612002777E0 /* EcStoreTests.swift in Sources */,
 				1F05EB411AF93AD600B65414 /* ItemDetailViewController.swift in Sources */,

@@ -13,10 +13,10 @@ enum Router: URLRequestConvertible {
     static let baseURLString = "https://api.thebase.in/1"
     static let clientId = "eb6d3098e22806d424cf9f7afe610794"
     static let clientSecret = "8000e50038e59bb32c9dfb55f5dbd88b"
-    static let code = "ab21e6ee295d9984c779902add8f72fc"
+    static let code = "754efd17330019c4361713cdcf8ad55b"
     static let redirectUri = "http://taka.base.ec/"
     static var OAuthToken: String?
-    static var refreshToken: String?
+
     
     case OAuth
     case ReOAuth
@@ -61,7 +61,7 @@ enum Router: URLRequestConvertible {
             if let token = userDefault.objectForKey("refresh_token") as? String {
                 refreshToken = token
             } else {
-                refreshToken = ""
+                refreshToken = "b43f4acb286f4f295f4ab39ad4242646"
             }
             return [
                 "grant_type": "refresh_token",

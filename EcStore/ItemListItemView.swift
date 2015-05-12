@@ -10,12 +10,12 @@ import UIKit
 
 class ItemListItemView: UICollectionViewCell {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    var photoInfo : Dictionary<String, String>?
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.photoImageView.image = nil
+    }
 }

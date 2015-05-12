@@ -13,8 +13,10 @@
 #import <ECSlidingViewController/ECSlidingViewController.h>
 //#import <Realm/Realm.h>
 
-#import "AFNetworking.h"
-#import "UIImageView+AFNetworking.h"
-#import "SVProgressHUD.h"
+#import <AFNetworking/AFNetworking.h>
+//#import "UIImageView+AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+
 
 #endif
